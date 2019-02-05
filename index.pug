@@ -1,0 +1,15 @@
+h1 Song Lyrics<br>Password Generator
+p Now you can create a secure, memorable password from your favorite song! As long as your favorite song is Summertime Sadness or Eleanor Rigby. Click below to generate a memorable password that meets the following requirements:
+ul
+  li Be a minimum of eight (8) characters in length.
+  li Contain at least one uppercase and one lowercase letter.
+  li Contain at least one special character.
+  li Is derived from a hit song.
+
+label(for="song") Choose a Song:
+select#song(name="song")
+  option(value="summerTimeSadness") Summertime Sadness
+  option(value="eleanorRigby") Eleanor Rigby
+input#output(placeholder="click to generate password")
+button#generate Generate Password
+button#copy Copy to Clipboard

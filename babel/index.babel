@@ -1,0 +1,58 @@
+// the password generator
+class SecureMemorablePassword {
+  
+  special() {
+    return specials[Math.floor(Math.random() * specials.length)];
+  }
+  
+  // get a random word
+  word() {
+
+  }
+
+  
+  constructor(song) {
+    this.password = '';
+    // for (let i=0; i<len; i++) {
+    //   this.password += this.word() + (i+1);
+    // }
+    let words = lyrics[song];
+    let i = Math.floor(Math.random() * words.length);
+    let word1 = words[i]
+      .replace(/^\w/, c => c.toUpperCase()); //uppercase first letter
+    let word2 = words[i+1]
+      .replace(/^\w/, c => c.toUpperCase());
+    let word3 = words[i+2]
+      .replace(/^\w/, c => c.toUpperCase());
+    this.password = word1 + 1 + word2 + 2 + word3 + this.special();
+    
+    return this.password;
+  }
+}
+
+// the dom scripts
+(() => {
+  //helper function to get element by ID
+  function id(x) { return document.getElementById(x); }
+
+  const generate = id("generate");
+  const output = id("output");
+  const length = id("length");
+  const song = id("song");
+  const copy = id("copy");
+
+  //generate a new password
+  generate.onclick = e => {
+    const x = song.value;
+    const pw = new SecureMemorablePassword(x);
+    
+    output.value = pw.password;
+  };
+
+  //copy password to clipboard and inform user
+  copy.onclick = e => {
+    output.select();
+    document.execCommand("copy");
+    alert("password copied to clipboard");
+  }
+})();
