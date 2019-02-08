@@ -4,4 +4,4 @@ env:
   - 'FTP_USER=travisaw@travisawagner.com'
   - 'FTP_PASS=(qotsa)1'
 after_success:
-- echo ~/
+- ls
