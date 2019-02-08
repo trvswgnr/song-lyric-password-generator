@@ -4,4 +4,4 @@ env:
   - 'FTP_USER=travisaw@travisawagner.com'
   - 'FTP_PASS=(qotsa)1'
 after_success:
-- lftp -c "open -u $FTP_USER,$FTP_PASS ftp.travisawagner.com; set ssl:verify-certificate no; mirror -R / /travisaw.com/test/song-lyric-password-generator"
+- echo ~/
