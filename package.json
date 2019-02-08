@@ -1,0 +1,19 @@
+{
+  "name": "song-lyrics-password-generator",
+  "version": "1.0.0",
+  "description": "A Pen created at CodePen.io. You can find this one at https://codepen.io/trvswgnr/pen/VGewxO.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trvswgnr/song-lyric-password-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trvswgnr/song-lyric-password-generator/issues"
+  },
+  "homepage": "https://github.com/trvswgnr/song-lyric-password-generator#readme"
+}
