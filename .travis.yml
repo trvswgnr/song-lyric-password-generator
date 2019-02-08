@@ -1,4 +1,6 @@
 language: generic
+addons:
+  ssh_known_hosts: travisawagner.com
 before_install:
 - openssl aes-256-cbc -K $encrypted_416e7b4ab6f4_key -iv $encrypted_416e7b4ab6f4_iv
   -in deploy_rsa.enc -out /tmp/deploy_rsa -d
