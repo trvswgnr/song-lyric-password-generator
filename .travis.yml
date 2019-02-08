@@ -10,4 +10,4 @@ addons:
     packages:
     - lftp
 os: linux
-script: lftp -c "open -u $FTP_USER,$FTP_PASS ftp.travisawagner.com; set ssl:verify-certificate no; mirror -R ./ /travisaw.com/test-production/song-lyrics-password-generator"
+script: ./build.sh
