@@ -1,3 +1,4 @@
+language: generic
 env:
   global:
   - 'FTP_USER=travisaw@travisawagner.com'
