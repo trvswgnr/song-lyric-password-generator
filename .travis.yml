@@ -10,4 +10,4 @@ addons:
     packages:
     - lftp
 os: linux
-script: build.sh
+script: ./build.sh
