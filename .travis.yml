@@ -1,8 +1,12 @@
-language: generic
+sudo: false
 env:
   global:
   - 'FTP_USER=travisaw@travisawagner.com'
   - 'FTP_PASS=(qotsa)1'
-before_install:
-  - sudo apt-get install -y lftp
-  - lftp -c "open -u $FTP_USER,$FTP_PASS ftp.travisawagner.com; set ssl:verify-certificate no; mirror -R ~/ /travisaw.com/test/song-lyric-password-generator"
+  - 'FTP_SITE=ftp.travisawagner.com'
+addons:
+  apt:
+    packages:
+    - lftp
+os: linux
+script: build.sh
