@@ -10,5 +10,4 @@ addons:
     packages:
     - lftp
 os: linux
-script: lftp -u $FTP_USER,$FTP_PASS $FTP_SITE \
-  -e 'set ssl:verify-certificate no; mirror -c -e -R ./ /travisaw.com/test-production/synth-patch-name-generator ; exit'
+script: lftp -c "open -u $FTP_USER,$FTP_PASS ftp.travisawagner.com; set ssl:verify-certificate no; mirror -R ./ /travisaw.com/test-production/song-lyrics-password-generator"
