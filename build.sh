@@ -8,4 +8,4 @@ abort() {
 [ -z $FTP_USER ] && abort "FTP_USER is undefined"
 [ -z $FTP_SITE ] && abort "FTP_SITE is undefined"
 lftp -u $FTP_USER,$FTP_PASS $FTP_SITE \
-  -e 'set ssl:verify-certificate no; mirror -c -e -R ~/ /travisaw.com/test-production/synth-patch-name-generator ; exit'
+  -e 'set ssl:verify-certificate no; mirror -c -e -R ./ /travisaw.com/test-production/synth-patch-name-generator ; exit'
