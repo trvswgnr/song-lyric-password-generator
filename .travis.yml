@@ -10,6 +10,7 @@ before_install:
 deploy:
   provider: script
   skip_cleanup: true
-  script: rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/ travisaw@travisawagner.com:/home/travisaw/travisaw.com/test/song-lyrics-password-generator
+  script: bash ./deploy.sh $TRAVIS_BUILD_DIR  $TRAVIS_BRANCH
   on:
-    branch: master
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^dev|master$
