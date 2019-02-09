@@ -3,7 +3,8 @@ set -e
 
 deployment() {
   DEPLOY_PATH="/home/travisaw/travisaw.com/test/dev/song-lyrics-password-generator"
-  rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/ -a --relative $DEPLOY_PATH travisaw@travisawagner.com:/
+  mkdir -p ~/travisaw.com/test/dev/song-lyrics-password-generator
+  rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/ travisaw@travisawagner.com:$DEPLOY_PATH
 }
 
 deployment
