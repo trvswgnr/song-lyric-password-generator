@@ -2,6 +2,6 @@
 set -e
 
 echo $TRAVIS_BUILD_DIR $TRAVIS_BRANCH
-return 0
+exit 0
 
 rsync -r --delete-after --quiet $TRAVIS_BUILD_DIR/ travisaw@travisawagner.com:/home/travisaw/travisaw.com/test/song-lyrics-password-generator
