@@ -1,1 +1,11 @@
 /.*
+/bower_components/
+/node_modules/
+/deploy_rsa.enc
+*.pug
+package.json
+/babel/
+/pug/
+/scss/
+/sass/
+/src/
